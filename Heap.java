@@ -35,8 +35,6 @@ class Heap {
         Node ret = item[1];
         item[1] = item[--size];
         down(1);
-        System.out.println("pop: "+ ret.key +" ==after pop==");
-        print();
         return ret;
     }
 
@@ -68,14 +66,6 @@ class Heap {
         item[j] = temp;
     }
 
-    void print()
-    {
-        for (int i = 1; i < size; i++) {
-            System.out.print(item[i].key+ " ");
-        }
-        System.out.println("");
-    }
-
     void deleteAt(int key)
     {
         int pos = 0;
@@ -88,7 +78,6 @@ class Heap {
         }
         if (pos == 0) return;
         item[pos] = item[--size];
-        if (pos == size) return;
         up(pos);
         down(pos);
     }
