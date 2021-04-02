@@ -18,7 +18,7 @@ public class Solution {
             result[i] = (char)(temp / 10 + '0');        // remember if sum over 10
         }
         if (result[result_length - 1] == '0') result[result_length - 1] = '\0'; // clear last item if == '\0'
-        return result;
+        return result; // result must be reverse
     }
 
     static class BigNum
